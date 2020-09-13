@@ -10,13 +10,11 @@ const port = process.env.PORT | 3000
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
 
-
 // app
 app.set('view engine', 'hbs')
 app.set('views', viewsPath)
 
 app.use(express.static(publicDirectoryPath))
-
 
 app.get('', (req, res) => {
     res.render('index')
